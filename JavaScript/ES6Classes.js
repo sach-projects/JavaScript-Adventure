@@ -1,3 +1,4 @@
+//E6 classes syntax (newer version)
 class Human{
     gender = "male";
     printGender = () => {

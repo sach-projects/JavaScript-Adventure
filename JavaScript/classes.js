@@ -1,3 +1,4 @@
+//Old syntax 
 class Human{
     constructor(){
         this.gender = "male";
