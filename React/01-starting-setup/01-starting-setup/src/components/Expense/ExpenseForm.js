@@ -49,8 +49,8 @@ function ExpenseForm(props) {
           <label>Date:</label>
           <input type="date" onChange={dateChangeHandler} value={date}></input>
         </div>
-        <div className="new-expense__control">
-        <input type="submit" ></input>
+        <div className="new-expense__actions">
+          <button type="submit">Add Expense</button>
         </div>
       </div>
     </form>
