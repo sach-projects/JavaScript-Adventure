@@ -21,11 +21,17 @@ function ExpenseForm(props) {
     event.preventDefault();
     const data = { title: title, amount: amount, date: new Date(date) };
     props.onExpenseFormSubmit(data);
+    hideForm();
+  };
+  const hideForm = ()=>{
     UpdateTitle("");
     UpdateAmount("");
     UpdateDate("");
-  };
-
+    props.onCancel(false);
+  }
+  const cancelHandler = () =>{
+    hideForm();
+  }
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -50,6 +56,7 @@ function ExpenseForm(props) {
           <input type="date" onChange={dateChangeHandler} value={date}></input>
         </div>
         <div className="new-expense__actions">
+          <button type="submit" onClick={cancelHandler}>Cancel</button>
           <button type="submit">Add Expense</button>
         </div>
       </div>
