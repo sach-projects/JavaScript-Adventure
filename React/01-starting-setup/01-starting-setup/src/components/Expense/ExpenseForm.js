@@ -19,7 +19,7 @@ function ExpenseForm(props) {
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    const data = { title: title, amount: amount, date: new Date(date) };
+    const data = { title: title, amount: +amount, date: new Date(date) };
     props.onExpenseFormSubmit(data);
     hideForm();
   };
